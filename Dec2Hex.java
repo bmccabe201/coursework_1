@@ -1,3 +1,5 @@
+package Dec2Hex;
+
 import java.util.Scanner;
 
 class Dec2Hex
@@ -12,13 +14,17 @@ class Dec2Hex
             try 
             {
                 Arg1 = Integer.parseInt(args[0]);
-            } 
+            }//End Try
             catch (NumberFormatException e) 
             {
                 System.err.println("Argument" + args[0] + " must be an integer.");
                 System.exit(1);
-            }
-        }
+            }//End Catch
+        }//End If
+	else
+	{
+		throw new Error("A Value must be provided");	
+	}//End Else
 
     	char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
          int rem, num;
@@ -31,9 +37,9 @@ class Dec2Hex
 	    rem=num%16;
 	    hexadecimal= ch[rem] + hexadecimal;
             num= num/16;
-        }
+        }//End While
         
         System.out.println("Hexadecimal representation is : " + hexadecimal);
 
-    }
-}
+    }//End Main
+}//End Class
