@@ -23,8 +23,8 @@ class Dec2Hex
         }//End If
 	else
 	{
-		System.err.println("Please Enter a Value");	
-	}
+		throw new Error("A Value must be provided");	
+	}//End Else
 
     	char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
          int rem, num;
